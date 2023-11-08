@@ -1,24 +1,35 @@
-EX 11: Oracle Database Connection with Python
-Date:
-AIM:
+# EX 11: Oracle Database Connection with Python
+## Date: 
+## AIM:
 To connect Oracle database with Python using cx_Oracle module.
-
-PROCEDURE:
-Install cx-Oracle : With the command pip install cx-Oracle
-To Connect connect(): Now Establish a connection between the Python program and Oracle database by using connect() function.
+## PROCEDURE:
+1. Install cx-Oracle : With the command **pip install cx-Oracle**
+2. To Connect **connect():**
+   Now Establish a connection between the Python program and Oracle database by using connect() function. 
+```python
 con = cx_Oracle.connect('username/password@localhost')
 cursor(): To execute a SQL query and to provide results some special object is required that is nothing but cursor() object.
 cursor = con.cursor()
-3.To Execute execute/executemany method:
-
+```
+3.To Execute **execute/executemany method:**
+```python
 cursor.execute(sqlquery) - - - -> to execute a single query. 
 cursor.executemany(sqlqueries) - - - -> to execute a single query with multiple bind variables/place holders.
-To Commit commit(): For DML(Data Manipulation Language) queries that comprise operations like update, insert, delete. We need to commit() then only the result reflects in the database.
-To Fetch rows: fetchone(), fetchmany(int), fetchall(): fetchone() : This method is used to fetch one single row from the top of the result set. fetchmany(int): This method is used to fetch a limited number of rows based on the argument passed in it. fetchall() : This method is used to fetch all rows from the result set.
-To Close db connectivity close(): After all done it is mandatory to close all operations.
+```
+4. To Commit **commit():**
+   For DML(Data Manipulation Language) queries that comprise operations like update, insert, delete. We need to commit() then only the result reflects in the database.
+5. To Fetch rows: **fetchone(), fetchmany(int), fetchall():**
+fetchone() : This method is used to fetch one single row from the top of the result set.
+fetchmany(int): This method is used to fetch a limited number of rows based on the argument passed in it.
+fetchall() : This method is used to fetch all rows from the result set.
+6. To Close db connectivity **close():**
+   After all done it is mandatory to close all operations.
+```python
 cursor.close()
 con.close()
-PROGRAM:
+```
+## PROGRAM:
+```python
 # importing module
 import cx_Oracle
 
@@ -41,10 +52,12 @@ finally:
 		cursor.close()
 	if con:
 		con.close()
-OUTPUT:
-image
+```
+## OUTPUT:
+![image](https://github.com/dineshgl/EX-11-Oracle-Database-Connection-with-Python/assets/143793356/2bcf1487-985e-4933-bef0-9751295f0b28)
 
-PROGRAM:
+## PROGRAM:
+```python
 import cx_Oracle
 # Load data from a csv file into Oracle table using executemany
 try:
@@ -72,10 +85,12 @@ finally:
 		cur.close()
 	if con:
 		con.close()
-OUTPUT
-image
+```
+## OUTPUT
+![image](https://github.com/dineshgl/EX-11-Oracle-Database-Connection-with-Python/assets/143793356/b9e771d7-d8b8-4057-ab58-ae1dcc942b1d)
 
-PROGRAM:
+## PROGRAM:
+```python
 import cx_Oracle
 try:
 	con = cx_Oracle.connect('tiger/scott@localhost:1521/xe')
@@ -97,8 +112,9 @@ else:
 finally:
 	if con:
 		con.close()
-OUTPUT:
-image
+```
+## OUTPUT:
+![image](https://github.com/dineshgl/EX-11-Oracle-Database-Connection-with-Python/assets/143793356/fd028efc-1a80-4c84-a398-5c372bfec6dd)
 
-RESULT:
+## RESULT:
 Thus the program for dababase connectivity with python has been executed successfully.
