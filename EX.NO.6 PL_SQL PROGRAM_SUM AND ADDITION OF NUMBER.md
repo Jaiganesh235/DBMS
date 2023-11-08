@@ -1,4 +1,3 @@
-
 # Ex. No: 6 PL/SQL program to perform addition and subtraction of two number 
 ### DATE: 
 ### AIM: To create PL/SQL program to perform addition and subtraction of two number.
@@ -26,9 +25,6 @@ end;
 ![image](https://github.com/Lakshmipriya2005/DBMS/assets/115525361/ca244df1-b136-4b51-abb1-e99402105b6b)
 
 
-
-### Result:
-Thust the program was performed sucessfully.
 
 ### Result:
 Thust the program was performed sucessfully.
